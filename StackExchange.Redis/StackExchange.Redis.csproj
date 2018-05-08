@@ -24,7 +24,7 @@
   </ItemGroup>
 
   <PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
-    <DefineConstants>$(DefineConstants);FEATURE_SERIALIZATION;FEATURE_THREADPOOL</DefineConstants>
+    <DefineConstants>$(DefineConstants);FEATURE_SERIALIZATION;FEATURE_THREADPOOL;VERBOSE</DefineConstants>
   </PropertyGroup>
 
   <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard1.5' ">
