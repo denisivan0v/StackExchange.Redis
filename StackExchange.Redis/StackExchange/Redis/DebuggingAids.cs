@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using System.IO;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -388,13 +389,13 @@ namespace StackExchange.Redis
 
         partial void OnTrace(string message, string category)
         {
-            Debug.WriteLine(message,
+            Console.WriteLine(message,
                 ((Environment.TickCount - epoch)).ToString().PadLeft(5, ' ') + "ms on " +
                 Environment.CurrentManagedThreadId + " ~ " + category);
         }
         static partial void OnTraceWithoutContext(string message, string category)
         {
-            Debug.WriteLine(message, Environment.CurrentManagedThreadId + " ~ " + category);
+            Console.WriteLine(message, Environment.CurrentManagedThreadId + " ~ " + category);
         }
 
         partial void OnTraceLog(TextWriter log, string caller)
